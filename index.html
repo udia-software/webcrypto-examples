@@ -16,27 +16,13 @@
     Written by Daniel Roesler
     License: GPLv2
     Pull requests welcome!
-    https://github.com/diafygi/webcrypto-examples/
+    https://github.com/udia-software/webcrypto-examples/
     -->
     <head>
         <title>WebCryptoAPI Live Table</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <style>
-            body{font-family:sans-serif;}
-            p > span{display:inline-block;width:30px;height:16px;vertical-align:middle;}
-            table{border-collapse:collapse;font-size:12px;}
-            th,td{padding:12px;border:1px solid #444444;}
-            th{font-size:14px;}
-            td{max-width:130px;}
-            td:first-child{max-width:200px;}
-            .disabled{background-color:#aaaaaa;}
-            .recommended{background-color:#8cff8c;}
-            .unsafe{background-color:#ffb6b6;}
-            .good,.bad{display:inline-block;padding-left:24px;margin-top:4px;min-height:20px;background-repeat:no-repeat;}
-            .good:first-child,.bad:first-child{margin-top:0px;}
-            .good{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA9ElEQVQ4y2P4//8/AzUxw6Ay0GG/A4vlFu8SEAaxKTIQbNg2r1WWW73+g/EW79UgMeoYhsAzSDYsdFUoM1DjSiyG/bfa6vWIZMOAmlZgMwyI/1hs8wwHK7TY7qEAFDhhsdXrOFCDPC7DgBqW4zEsGhwpUMMeIEnet9nsK0eOYWADQS7Douiu6U43WaQwW0aMYfgMBOE7IO8D6aXEGobLy8j4OymGwRO22SZfRaCihzg0E20YSk6x2eKtBEpHlBiGkfVAhgI1PSbXMKx52WqbpzIWQ4kyDGfhYLnDXQXJUKINw1vagGLfYot3j/lWL9ehW8BiwwA8jA6GeQxGVAAAAABJRU5ErkJggg==);}
-            .bad{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAqklEQVQ4y7WVSxKDIBBE+0DmINnk0J7BpSZZewNXI00BhRXRSdku2gU0r5wPA8wM1Bd4foAhqB+BLq+3RA+9PMOzeT1+3sArbCxBljRPwKMF4x49lX8hIwLTn9WwQ+gOrEDJQgrTGtpAD2BZA1Ie7AzqgFF9Tu6ZcfZ4yPKGYp4oSpUvQjd59lbQBfsB/gndbat7gdKQpUWRto28seVXTz4c5ONLPmDVT8AKvHEh2mU9JE0AAAAASUVORK5CYII=);}
-        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,400">
+        <link rel="stylesheet" href="./base.css">
         <script>
             window.crypto = window.crypto || window.msCrypto; //for IE11
             if(window.crypto.webkitSubtle){
@@ -75,20 +61,19 @@
         <h1>Web Cryptography API Live Table</h1>
         <noscript><h3>Please enable JavaScript!</h3></noscript>
         <p>
-            This table is live! Every ✓ or ✗ on this page is a test to see if
-            your browser supports that method in <a href="http://www.w3.org/TR/WebCryptoAPI/" target="_blank">WebCryptoAPI</a>.
+            This table is live. Refer to the <a href="http://www.w3.org/TR/WebCryptoAPI/" target="_blank">WebCryptoAPI</a>.
+            Algorithms are either: <br/><span class="good">Supported</span><br/>or<br/><span class="bad">Unsupported</span><br/>
         </p>
         <p>
             Source code and examples:
-            <a href="https://github.com/diafygi/webcrypto-examples/">
-                https://github.com/diafygi/webcrypto-examples/
+            <a href="https://github.com/udia-software/webcrypto-examples/">
+                https://github.com/udia-software/webcrypto-examples/
             </a>
         </p>
         <p>
-            <span class="recommended"></span> - Recommended
-        </p>
-        <p>
-            <span class="unsafe"></span> - Discouraged! Only use for backwards compatibility!
+            <span class="recommended"></span> - Recommended<br/>
+            <span class="unsafe"></span> - Discouraged! Only use for backwards compatibility!<br/>
+            <span class="disabled"></span> - Not Applicable
         </p>
         <table>
             <tr>
@@ -121,7 +106,7 @@
                 }
             </script>
             <tr id="aes-gcm">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#aes-gcm">AES-GCM</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#aes-gcm">AES-GCM</a></td>
                 <td class="encrypt recommended">
                     <script>
                         //encrypt
@@ -819,7 +804,7 @@
                 }
             </script>
             <tr id="ecdsa">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#ecdsa">ECDSA</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#ecdsa">ECDSA</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign recommended">
@@ -976,7 +961,7 @@
                 }
             </script>
             <tr id="hmac">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#hmac">HMAC</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#hmac">HMAC</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign recommended">
@@ -1099,7 +1084,7 @@
             ###################
             -->
             <tr id="sha-256">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#sha-256---digest">SHA-256</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#sha-256---digest">SHA-256</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -1128,7 +1113,7 @@
             ###################
             -->
             <tr id="sha-384">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#sha-384---digest">SHA-384</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#sha-384---digest">SHA-384</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -1157,7 +1142,7 @@
             ###################
             -->
             <tr id="sha-512">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#sha-512---digest">SHA-512</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#sha-512---digest">SHA-512</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -1193,7 +1178,7 @@
                 }
             </script>
             <tr id="ecdh">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#ecdh">ECDH</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#ecdh">ECDH</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -1370,7 +1355,7 @@
             ##################
             -->
             <tr id="pbkdf2">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#pbkdf2">PBKDF2</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#pbkdf2">PBKDF2</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -1522,7 +1507,7 @@
                 };
             </script>
             <tr id="aes-kw">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#aes-kw">AES-KW</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#aes-kw">AES-KW</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -1863,7 +1848,7 @@
                 }
             </script>
             <tr id="rsa-oaep">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#rsa-oaep">RSA-OAEP</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#rsa-oaep">RSA-OAEP</a></td>
                 <td class="encrypt unsafe">
                     <script>
                         //encrypt
@@ -2396,7 +2381,7 @@
                 }
             </script>
             <tr id="aes-ctr">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#aes-ctr">AES-CTR</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#aes-ctr">AES-CTR</a></td>
                 <td class="encrypt unsafe">
                     <script>
                         //encrypt
@@ -3145,7 +3130,7 @@
                 }
             </script>
             <tr id="aes-cbc">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#aes-cbc">AES-CBC</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#aes-cbc">AES-CBC</a></td>
                 <td class="encrypt unsafe">
                     <script>
                         //encrypt
@@ -3834,7 +3819,7 @@
                 }
             </script>
             <tr id="aes-cfb">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#aes-cfb">AES-CFB</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#aes-cfb">AES-CFB</a></td>
                 <td class="encrypt unsafe">
                     <script>
                         //encrypt
@@ -3982,7 +3967,7 @@
                 }
             </script>
             <tr id="rsassa-pkcs1">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign unsafe">
@@ -4184,7 +4169,7 @@
                 }
             </script>
             <tr id="rsa-pss">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#rsa-pss">RSA-PSS</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#rsa-pss">RSA-PSS</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign unsafe">
@@ -4385,7 +4370,7 @@
                 }
             </script>
             <tr id="aes-cmac">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#aes-cmac">AES-CMAC</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#aes-cmac">AES-CMAC</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign unsafe">
@@ -4491,7 +4476,7 @@
             #################
             -->
             <tr id="sha-1">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#sha-1---digest">SHA-1</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#sha-1---digest">SHA-1</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -4541,7 +4526,7 @@
                 }
             </script>
             <tr id="dh">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#dh">DH</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#dh">DH</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -4717,7 +4702,7 @@
             ##################
             -->
             <tr id="concatkdf">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#concat">CONCAT</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#concat">CONCAT</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -4793,7 +4778,7 @@
             ####################
             -->
             <tr id="hkdf-ctr">
-                <td class="algname"><a href="https://github.com/diafygi/webcrypto-examples/#hkdf-ctr">HKDF-CTR</a></td>
+                <td class="algname"><a href="https://github.com/udia-software/webcrypto-examples/#hkdf-ctr">HKDF-CTR</a></td>
                 <td class="encrypt disabled"></td>
                 <td class="decrypt disabled"></td>
                 <td class="sign disabled"></td>
@@ -4864,17 +4849,36 @@
             -->
         </table>
         <p>
-            ( <span class="disabled"></span> = not applicable )
-        </p>
-        <p>
-            *I don't have an example to test importKey. Pull requests welcome!
-        </p>
-        <p>
             Source code and examples:
-            <a href="https://github.com/diafygi/webcrypto-examples/">
-                https://github.com/diafygi/webcrypto-examples/
+            <a href="https://github.com/udia-software/webcrypto-examples/">
+                https://github.com/udia-software/webcrypto-examples/
             </a>
         </p>
+        <p>
+            Forked from: <a href="https://github.com/diafygi/webcrypto-examples">https://github.com/diafygi/webcrypto-examples</a>.
+            <pre>
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Thank you, Daniel Roesler.
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEgWj1V5RTIMXVxPeJ6/5jcfpqedwFAlq954UACgkQ6/5jcfpq
+edxWFQ//bx5Y35GGe5rOl3tFZ+mD/t0xVuqXxZ+karA0Cxe52J3hzpfr3+g0hZ/J
+gWui71OlIHbMEpI6fz90na7003f8BZZFTyA8//TTcWbep1g5kv2DMFR+adBLyauh
+hBSs4m5jqdfq/ob2bJzDf2GN2/TlVs0ypz93dWkKZ8SoyUbjV7J1rg1Dk9Trlyvr
+K7KoyZjLwbBpgAZBQ2dlF1RoabpXHX/TicVOvrcmZydsQ8xozs1robPgqWxG4zAi
+swk1YAIbM1XCrcbBJ8KL7pgylT2jReYX8uPAt0CDsfjrbQLf718CYNaya0UWHlWf
+V+dSw/enS+B/c/jNNc2H4WuQYoJplYvssIrx29fusVO3AQ5JA4iqHDXlRLqCups8
+bCIDJOHlGdSswchjN4j9jDS6pd01neVbe2HXfwdx3LsZC9B35jHW8auMOvJg8uVj
+CrCt2RLFDSHRqmRc+1k/5KtbeYQkcizq/iSYVd0a/AvKwK0D47blMbXBoMfNZ65c
+yA00S9QucRvdu5RfS6AO37Yhjmf7USGgZZvOrZEvjB6nQSwe0QLlwoKlBJQrPs/d
+XhvlZ9VMgEcCzAKakCPnGKW9b4zNNQEaXjKFeuYCfSeq12cMuwPDb9m5EdcrFXex
+uUgaibk712TcXQEKxeQ2ZvNYCkEQUnZ+SQ51C80YKD45aLwK8xc=
+=hF+2
+-----END PGP SIGNATURE-----
+                </pre>
+            </p>
     </body>
 </html>
 

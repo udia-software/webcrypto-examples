@@ -1,6 +1,8 @@
 # Web Cryptography API Examples
 
-Live Table: https://diafygi.github.io/webcrypto-examples/
+This is a fork of [/diafygi/webcrypto-examples](https://github.com/diafygi/webcrypto-examples). Changes made are primarily cosmetic.
+
+Live Table: https://udia-software.github.io/webcrypto-examples/
 
 I couldn't find anywhere that had clear examples of WebCryptoAPI, so I
 wrote examples and made a live table with them. Pull requests welcome!
